@@ -1,0 +1,57 @@
+<header class="bg-white shadow-sm p-4 flex justify-between items-center">
+  <div class="flex items-center">
+    <button id="mobile-menu-button" class="mr-4 text-gray-600 md:hidden">
+      <i class="fas fa-bars"></i>
+    </button>
+    <h2 class="text-xl font-semibold text-gray-800" id="page-title">Upcoming Concerts</h2>
+  </div>
+  <div class="flex items-center space-x-4">
+    <div class="relative" id="search-container">
+      <input 
+        type="text" 
+        id="search-input"
+        placeholder="Search concerts..." 
+        class="pl-10 pr-4 py-2 border rounded-full text-sm w-64 focus:outline-none focus:ring-2 focus:ring-purple-500" 
+      />
+      <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
+    </div>
+    
+    <!-- Notification Bell with Dropdown -->
+    <div class="relative">
+      <button id="notification-bell" class="text-gray-600 relative hover:text-purple-600 transition-colors">
+        <i class="fas fa-bell text-lg"></i>
+        <span class="notification-badge absolute -top-1 -right-1 h-5 w-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold" style="display: none;">0</span>
+      </button>
+      
+      <!-- Notification Dropdown -->
+      <div id="notification-dropdown" class="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 z-50 hidden">
+        <div class="px-4 py-3 border-b border-gray-200 bg-gray-50 rounded-t-lg">
+          <div class="flex justify-between items-center">
+            <h3 class="text-sm font-semibold text-gray-900">Notifications</h3>
+            <div class="flex space-x-2">
+              <button id="mark-all-read" class="text-xs text-blue-600 hover:text-blue-800 font-medium">
+                Mark all read
+              </button>
+              <span class="text-gray-300">|</span>
+              <button id="clear-all-notifications" class="text-xs text-red-600 hover:text-red-800 font-medium">
+                Clear all
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Notifications List -->
+        <div id="notifications-list" class="max-h-80 overflow-y-auto">
+          <!-- Notifications will be rendered here -->
+        </div>
+        
+        <div class="px-4 py-2 border-t border-gray-200 bg-gray-50 rounded-b-lg text-center">
+          <p class="text-xs text-gray-500">
+            <i class="fas fa-info-circle mr-1"></i>
+            Click on notifications to mark as read
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
